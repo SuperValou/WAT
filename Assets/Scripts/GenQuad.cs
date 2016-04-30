@@ -10,8 +10,9 @@ public class GenQuad : MonoBehaviour
     void createQuad()
     {
         var point = Random.insideUnitCircle * radius;
-        Instantiate(quad, new Vector3(point.x, point.y, this.transform.position.z), Quaternion.identity);
+        GameObject g = Instantiate(quad, new Vector3(point.x, point.y, this.transform.position.z), Quaternion.identity) as GameObject;
 
+        //g.transform.Rotate(g.transform.forward, Random.value * Random.Range(0, 180));
         
     }
 
